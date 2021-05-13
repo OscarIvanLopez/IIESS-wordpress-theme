@@ -1,0 +1,537 @@
+/* 
+    Theme Name: Instituto Interamericano de Educación Superior para la Salud V.3
+    Theme URI: 
+    Author: Oscar Lopez, Hector Partida
+    Author URI: https://github.com/OscarIvanLopez
+    Description: Tema para el Instituto Interamericano de Educación Superior para la Salud
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: Licenciatura de enfermeria, guaymas, escuela enfermeria, preparatoria enfermeria, enfermeria, enfermeria guaymas, iiess, instituto interamericano de educación superior para la salud
+    Text Domain: iiess
+*/
+
+@import "./css/inicio-styles.css";
+@import "./css/footer-styles.css";
+@import "./css/nosotros-styles.css";
+@import "./css/oferta-styles.css";
+@import "./css/documentos.style.css";
+@import "./css/contacto-styles.css";
+@import "./css/eventos-styles.css";
+@import "./css/preparatoria-styles.css";
+@import "./css/cursos-styles.css";
+
+:root {
+  /*! Fuentes */
+  --fuentePrincipal: "Raleway", sans-serif;
+  --fuenteTexto: "Open Sans", sans-serif;
+  --fuenteSecundaria: "Staatliches", cursive;
+
+  /*! Colores */
+  --colorPrimario: #234389;
+  --colorSecundario: #fec900;
+  --grisOscuro: #2f2e2e;
+  --grisClaro: #ebebeb;
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*! 10px = 1rem */
+}
+
+body {
+  font-size: 1.6rem; /*! default font-size for document */
+  line-height: 1.5; /*! a nice line-height */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*!* headings **/
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuenteSecundaria);
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 6rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+/*! Globales */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid var(--grisClaro);
+  height: 3px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  color: var(--colorPrimario);
+}
+
+.linea-baja-amarilla {
+  border: none;
+  margin: 0 0 1rem 0 !important;
+  background-color: var(--colorSecundario);
+  width: 20%;
+}
+
+.linea-baja-azul {
+  border: none;
+  margin: 0 0 1rem 0 !important;
+  background-color: var(--colorPrimario);
+  width: 20%;
+}
+
+.linea-baja-blanca {
+  border: none;
+  margin: 0 0 1rem 0 !important;
+  background-color: var(--blanco);
+  width: 20%;
+}
+.contenedor {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.contenedor-grande {
+  max-width: 100%;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/*! Utilities */
+.text-center {
+  text-align: center;
+}
+
+.texto-primario {
+  color: var(--colorPrimario);
+}
+
+.seccion {
+  padding: 5rem 0;
+}
+
+.linea-abajo {
+  border-bottom: var(--colorSecundario) 3px solid;
+}
+/*! Header */
+.site-header {
+  background-color: var(--blanco);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.carrucel {
+  margin-top: 1rem;
+}
+.sub-menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 24rem;
+}
+
+/*! Menu principal */
+.menu-principal {
+  display: none;
+  line-height: 2;
+}
+
+@media (min-width: 768px) {
+  .menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .menu-principal .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu-principal li {
+    margin-right: 0.5rem;
+  }
+  .menu-principal li:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.menu-principal a {
+  font-family: var(--fuenteSecundaria);
+  color: var(--colorPrimario);
+  font-size: 2.2rem;
+  padding: 0.5rem 2rem;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-principal a {
+    font-size: 2.6rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-principal a::before,
+  .menu-principal a::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: var(--colorSecundario);
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.6s;
+  }
+
+  .menu-principal a::before {
+    top: 0;
+    transform-origin: left;
+  }
+
+  .menu-principal a::after {
+    top: 50%;
+    transform-origin: right;
+  }
+  .menu-principal a:hover::before {
+    transform: scaleX(1);
+  }
+  .menu-principal a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.menu-principal .current_page_item {
+  border-bottom: 3px solid var(--colorPrimario);
+}
+
+/*! Reescribir estilos menu movil slicknav */
+
+.slicknav_menu {
+  background-color: var(--colorSecundario);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .slicknav_menu {
+    display: none;
+  }
+}
+
+.slicknav_btn {
+  background-color: var(--colorPrimario);
+  margin: 3rem 0;
+  padding: 1.5rem;
+}
+
+.slicknav_nav a {
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: var(--fuenteSecundaria);
+}
+
+.slicknav_nav a:hover {
+  background-color: transparent;
+  color: var(--colorPrimario);
+}
+
+/*! Footer **/
+
+.contenido-footer {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contenido-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-links {
+    display: flex;
+    margin-top: 4rem;
+  }
+}
+.site-footer {
+  background-color: var(--colorPrimario);
+  width: 100%;
+  height: auto;
+}
+.site-footer .menu-principal {
+  display: block;
+}
+
+.site-footer a {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 2.4rem;
+  padding: 0 1rem;
+
+  transition: color 0.2s ease-in-out;
+}
+.site-footer a:hover {
+  color: var(--colorSecundario);
+}
+
+.site-footer .menu-principal .current_page_item {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .site-footer .menu-principal .current_page_item {
+    border-bottom: 3px solid var(--colorPrimario);
+  }
+}
+.site-footer .menu-principal a::before,
+.site-footer .menu-principal a::after {
+  display: none;
+}
+
+.copyright {
+  text-align: center;
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.8rem;
+  margin: 2rem 0 0 0;
+  color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    font-size: 2.4rem;
+    margin: 0;
+  }
+}
+
+/*! Estilos propios */
+.img-thumbnail {
+  width: 966px;
+  height: 644px;
+}
+
+/*! Paginas */
+@media (min-width: 768px) {
+  .pagina.con-sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contenido-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .con-sidebar .contenido-principal {
+    flex: 0 0 calc(65% - 2rem);
+  }
+  .con-sidebar .sidebar {
+    flex: 0 0 calc(35% - 2rem);
+  }
+}
+
+/* NO SIDEBAR  */
+.no-sidebar {
+  display: flex;
+  justify-content: center;
+}
+
+.no-sidebar .contenido-principal {
+  flex: 0 1 800px;
+}
+/*! SINGLE CLASES  */
+.informacion-clase {
+  font-weight: 700;
+  font-family: var(--fuentePrincipal);
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+/*! Clases */
+.lista-clases {
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .lista-clases {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/*! Cards */
+@media (min-width: 768px) {
+  .gradient::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+21,0.2+50,0.7+99 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 21%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.7) 99%,
+      rgba(0, 0, 0, 0.7) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 21%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.7) 99%,
+      rgba(0, 0, 0, 0.7) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 21%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.7) 99%,
+      rgba(0, 0, 0, 0.7) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+  }
+}
+.card {
+  margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 2rem);
+    position: relative;
+  }
+}
+.card .contenido {
+  padding: 3rem;
+}
+@media (min-width: 768px) {
+  .card .contenido {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    z-index: 2;
+  }
+}
+.card .contenido h3 {
+  line-height: 1;
+  color: var(--colorPrimario);
+}
+@media (min-width: 768px) {
+  .card .contenido h3 {
+    color: var(--blanco);
+  }
+}
+.card .contenido p {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .card .contenido p {
+    color: var(--colorPrimario);
+  }
+}
+
+.separator {
+  text-align: center;
+}
+.separator-line {
+  border-top-style: solid;
+  border-top-width: 5px;
+  width: 27%;
+  border-color: #fec900;
+  margin-bottom: 5px;
+}
+
+/* Framework styles*/
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.border {
+  height: 3px;
+  width: 40px;
+  background: var(--colorSecundario);
+  color: var(--colorSecundario);
+  background-color: var(--colorSecundario);
+  border: 0px;
+}
+
+@media (max-width: 1200px) {
+  .menu-principal ul li a {
+    font-size: 1.5rem;
+  }
+}

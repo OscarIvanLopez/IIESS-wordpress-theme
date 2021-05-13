@@ -1,0 +1,98 @@
+@media (max-width: 768px) {
+  .titulo-documentos {
+    font-size: 6rem !important;
+  }
+}
+.documentos-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 35vh;
+  width: 100%;
+}
+
+.documentos-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://demo.iiess.edu.mx/wp-content/uploads/2021/05/documentos-hero.png);
+  background-size: cover;
+  background-position: center center;
+}
+.documentos-hero hr {
+  z-index: 2;
+  background-color: var(--blanco);
+  border: 2px solid var(--blanco);
+  width: 8%;
+}
+.documentos-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.documentos-contenedor h1 {
+  margin: 0;
+  z-index: 2;
+  font-size: 10rem;
+  color: var(--colorPrimario);
+}
+.documentos {
+  width: 75%;
+  margin: 2rem 0;
+}
+.documentos ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.documentos ul li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.documentos ul li i {
+  font-size: 3rem;
+}
+.descarga-button {
+  color: var(--colorPrimario);
+  border: 3px solid var(--colorPrimario);
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.descarga-button:hover {
+  color: var(--blanco);
+  border: 3px solid var(--colorSecundario);
+  background-color: var(--colorSecundario);
+}
+
+.documentos ul li span {
+  font-size: 3rem;
+  font-family: var(--fuenteSecundaria);
+}
+
+@media (min-width: 1070px) {
+  .documentos ul li {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1070px) {
+  .documentos hr {
+    display: none;
+  }
+}

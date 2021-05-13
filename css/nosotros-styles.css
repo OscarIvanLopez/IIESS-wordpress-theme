@@ -1,0 +1,116 @@
+hr {
+  background-color: black;
+  width: 50%;
+  height: 1px;
+}
+
+h2,
+h3 {
+  color: var(--colorPrimario);
+}
+.nosotros-hero::before{
+  background-image: url(https://demo.iiess.edu.mx/wp-content/uploads/2021/05/nosotros-header.png)!important;
+}
+.logo-iiess {
+  max-width: 65%;
+}
+.objetivos {
+  width: 100%;
+  text-align: left;
+}
+.carta {
+  width: 90%;
+  height: 20rem;
+  border-radius: 2rem;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+}
+.titulo-carta {
+  background-color: var(--colorPrimario);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.titulo-carta span {
+  font-size: 3rem;
+  color: var(--blanco);
+}
+
+.contenido-carta p {
+  padding: 1rem 2rem;
+}
+
+.valores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nosotros-izquierda i {
+  font-size: 10rem;
+  color: var(--colorPrimario);
+}
+.nosotros-derecha i {
+  font-size: 10rem;
+  color: var(--colorPrimario);
+}
+
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    flex-direction: row;
+  }
+  .nosotros-izquierda {
+    flex: 2;
+  }
+  .nosotros-derecha {
+    flex: 2;
+    height: 100%;
+  }
+  .nosotros-derecha img {
+    width: 90%;
+  }
+  .nosotros-izquierda i {
+    font-size: 10rem;
+    color: var(--colorPrimario);
+  }
+  .nosotros-derecha i {
+    font-size: 10rem;
+    color: var(--colorPrimario);
+  }
+  .contenido-nosotros {
+    width: 100%;
+  }
+  .nosotros-izquierda-cartas {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .nosotros-derecha-cartas {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .valores {
+    flex-direction: row;
+  }
+  .carta {
+    height: 20rem;
+  }
+}
+
+.container .row a {
+  margin-bottom: 2rem;
+}

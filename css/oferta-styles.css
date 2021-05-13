@@ -1,0 +1,274 @@
+.oferta-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+}
+.oferta-hero h1 {
+  z-index: 2;
+}
+.oferta-hero hr {
+  z-index: 2;
+}
+/* .oferta-hero */
+.oferta-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://demo.iiess.edu.mx/wp-content/uploads/2021/05/oferta-hero.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.oferta-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blanco);
+  height: auto;
+  margin: 0;
+  font-size: 8rem;
+}
+
+@media (min-width: 768px) {
+  .oferta-titulo {
+    font-size: 12rem;
+  }
+}
+
+.titulo-lic {
+  color: var(--colorPrimario) !important;
+  font-size: 4rem;
+}
+.oferta-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.oferta-contenedor {
+  width: 100%;
+}
+
+.lic-enfermeria {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--colorPrimario);
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.titulo h2 {
+  margin: 1rem 0 0 0;
+
+  color: var(--blanco);
+}
+.titulo hr {
+  background-color: var(--blanco);
+  margin: 0 0 1rem 0;
+  border: none;
+}
+.enfermeria-titulo {
+  color: var(--colorPrimario) !important;
+}
+
+.titulo-alt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.titulo-alt h2 {
+  color: var(--colorPrimario);
+  margin: 1rem 0 0 0;
+  font-size: 7rem !important;
+}
+.titulo-alt hr {
+  background-color: var(--colorSecundario);
+  margin: 0 0 1rem 0;
+  border: none;
+}
+.lic-contenido {
+  color: var(--colorPrimario);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.semestres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lic-contenido h4 {
+  margin: 0 !important;
+}
+.lic-contenido h5 {
+  font-size: 4rem;
+  font-family: var(--fuentePrincipal) !important;
+}
+.cursos-requisitos h5 {
+  font-size: 4rem;
+  font-family: var(--fuentePrincipal) !important;
+}
+.lic-contenido hr {
+  border: none;
+  margin: 0 0 1rem 0 !important;
+  background-color: var(--colorSecundario);
+  width: 20%;
+}
+
+.semestre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin-bottom: 2rem;
+}
+
+.semestre hr {
+  width: 10%;
+}
+.semestre ul {
+  width: 100%;
+  text-align: left;
+}
+.semestre ul li {
+  list-style-type: disc;
+}
+
+.cursos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--colorPrimario);
+}
+.cursos-contenido {
+  color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cursos-contenido h4 {
+  font-size: 4rem !important;
+}
+.cursos-contenido hr {
+  border: none;
+  margin: 0 0 1rem 0 !important;
+  background-color: var(--colorSecundario);
+  width: 20%;
+}
+
+.inicio p {
+  margin: 0 !important;
+}
+.inici-alt p {
+  margin: 0 !important;
+}
+.inicio h3 {
+  color: var(--blanco);
+}
+.inicio-alt h3 {
+  color: var(--colorPrimario);
+}
+
+.cursos-requisitos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.cursos-requisitos ul {
+  list-style-type: disc;
+}
+.inscripciones i {
+  font-size: 5rem;
+}
+.inicio i {
+  font-size: 5rem;
+}
+.inscripciones-alt i {
+  font-size: 5rem;
+}
+.inicio-alt i {
+  font-size: 5rem;
+}
+.inscripciones-alt h3 {
+  color: var(--blanco);
+}
+.inicio-alt h4 {
+  font-size: 5rem !important;
+}
+
+.enfermeria {
+  background-color: var(--colorPrimario);
+  color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+  .inicio h3 {
+    display: none;
+  }
+  .lic-contenido h4 {
+    font-size: 4rem !important;
+  }
+  .inicio-alt h3 {
+    display: none;
+  }
+  .cursos-contenedor {
+    display: flex;
+  }
+  .cursos-contenedor h4 {
+    font-size: 5rem !important;
+    margin: 0 1.5rem 3rem 1.5rem !important;
+  }
+  .lic-contenido {
+    width: 100%;
+  }
+  .semestres {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .semestre {
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .oferta-titulo {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 768px) {
+  .titulo {
+    font-size: 6rem;
+  }
+}

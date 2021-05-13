@@ -1,0 +1,12 @@
+.preparatoria-hero h1 {
+  font-size: 6rem;
+}
+.preparatoria-hero::before {
+  background-image: url(https://demo.iiess.edu.mx/wp-content/uploads/2021/05/preparatoria-hero.png);
+}
+
+@media(min-width: 768px){
+	.preparatoria-hero h1 {
+		font-size: 12rem;
+	  }
+}
