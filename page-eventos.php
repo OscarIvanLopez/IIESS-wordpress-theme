@@ -10,14 +10,15 @@
     <hr class="linea-baja-amarilla">
 </div>
 
-<div class="container eventos-wrapper">
+<div class="eventos-page-wrapper">
+    <div class="eventos-wrapper">
+    <h1 class="texto-primario titulo-eventos">Somos Excelentes ¡Somos IIESS!</h1>
+        <?php get_template_part('template-parts/paginas') ?>
 
-<h1>Somos Excelentes ¡Somos IIESS!</h1>
 
-<div class="card">
-    <h3></h3>
-</div>
+    <?php  iiess_lista_eventos() ?>
 
+    </div>
 </div>
 <?php get_footer() ?>
 

@@ -3,7 +3,7 @@
 <main class="contenedor pagina seccion con-sidebar">
     <div class="contenido-principal">
 
-        <!-- Este es el loot que checkea el contenido en loop mamin -->
+        <!-- Este es el loot que checkea el contenido en loop manin -->
         <?php get_template_part('template_parts/paginas') ?>
 
     </div>

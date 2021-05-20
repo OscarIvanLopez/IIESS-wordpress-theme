@@ -1,0 +1,39 @@
+
+.post-image-wrapper{
+  margin-bottom: 1rem;
+
+}
+
+.contenido-evento {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.fecha-evento{
+  text-align: left;
+  font-size: 4rem;
+  width: 100%;
+  color: var(--colorPrimario);
+  font-family: var(--fuenteSecundaria);
+}
+
+.single-evento-wrapper{
+  width: 100%;
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(min-width: 768px){
+
+  .contenido-evento-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.contenido-evento-wrapper{
+  width: 90%!important;
+}

@@ -1,27 +1,20 @@
-<?php while (have_posts()) : the_post(); ?>
-    <h1 class="text-center texto-primario">
-        <?php the_title(); ?>
-    </h1>
-    <!-- <div class="separator">
-        <div class="separator-line"></div>
-    </div> -->
-    <!-- <?php
-            if (has_post_thumbnail()) :
-                the_post_thumbnail('blog', array('class' => 'imagen-destacada'));
-            endif ?> -->
+<?php while (have_posts()) : the_post() ?>
 
-    <?php
-    // Revisar si el custom post type es clases
-    if (get_post_time() === "gymfitness_clases") {
-        $hora_inicio = get_field('hora_inicio');
-        $hora_fin = get_field('hora_fin');
-    ?>
-        <p class="informacion-clase"><?php the_field('dias_clase') ?> - <?php echo $hora_inicio ?> a <?php echo $hora_fin ?> </p>
-    <?php
-    }
+    <h1 class="text-center texto-primario"><?php the_title() ?></h1>
+
+    <?php if (has_post_thumbnail()) :
+        the_post_thumbnail("blog", array('class' => 'imagen-destacada'));
+    endif;
     ?>
 
-    <?php the_content(); ?>
+    <?php
+    if (get_post_type() === "iiess_eventos") {
+        $fecha = get_field('fecha_evento');
+    ?>
+        <p class="informacion-clase"><?php the_field('fecha_evento') ?> - <?php echo $fecha . " a " . $fecha; ?></p>
 
+    <?php } ?>
 
-<?php endwhile ?>
+    <p><?php the_content(); the_title(); ?></p>
+
+<?php endwhile; ?>

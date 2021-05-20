@@ -1,2 +1,5 @@
 <aside class=sidebar>
-<h1 class="texto-primario text-center">Sidebar aqui</h1></aside>
+<?php
+    dynamic_sidebar('sidebar')
+?>
+</aside>

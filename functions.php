@@ -49,3 +49,18 @@ function gymfitness_scripts_styles()
 }
 
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
+
+//Definir zona de widgets
+
+function iiess_widgets(){
+    register_sidebar(array(
+        'name' => 'Sidebar Eventos',
+        'id' => 'sidebar',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="text-center texto-primario">',
+        'after_title' => '</h3>'
+    ));
+}
+
+add_action('widgets_init', 'iiess_widgets');

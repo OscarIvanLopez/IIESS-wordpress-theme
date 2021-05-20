@@ -27,7 +27,7 @@
             </div>
 
             <div class="footer-2">
-                <h4>Menu</h4>
+                <h4>Menú</h4>
 
                 <ul>
                     <!-- <li><i class="fas fa-calendar-check"></i><a href=""><span> </span>Eventos</a> </li> -->

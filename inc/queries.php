@@ -1,14 +1,14 @@
 <?php
 
-function gymfitness_lista_clases()
+function iiess_lista_eventos()
 { ?>
     <ul class="lista-clases">
         <?php
         $args = array(
-            'post_type' => 'gymfitness_clases',
-            'post_per_page' => 10,
-            'orderby' => 'title',
-            'order' => 'ASC'
+            'post_type' => 'iiess_eventos',
+            'post_per_page' => 1000,
+            'orderby' => 'date',
+            'order' => 'DESC'
         );
         $clases = new WP_Query($args);
         while ($clases->have_posts()) : $clases->the_post() ?>
@@ -18,14 +18,13 @@ function gymfitness_lista_clases()
                 <div class="contenido">
                     <a href="<?php the_permalink(); ?>">
                         <h3><?php the_title() ?></h3>
-                    </a>
 
 
                     <?php
-                    $hora_inicio = get_field('hora_inicio');
-                    $hora_fin = get_field('hora_fin');
+                    $fecha_evento = get_field('fecha_evento');
                     ?>
-                    <p><?php the_field('dias_clase') ?> - <?php echo $hora_inicio ?> a <?php echo $hora_fin ?> </p>
+                    <p><?php echo ucfirst($fecha_evento); ?> </p>
+                    </a>
                 </div>
             </li>
 
